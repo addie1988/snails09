@@ -1,0 +1,593 @@
+// 嵌入
+@import './_reset'
+@import './_headerTop'
+@import './_header'
+@import './_menu'
+@import './_banner'
+@import './footer'
+
+// --------------------------------------------------
+
+// 宣告變數
+$max-width: 1140px
+$display: flex
+$flex-wrap: wrap
+$display_none: none
+$align-items: center
+$justify_content: center
+$justify_content_left: left
+$justify_content_right: right
+$inline_block: inline-block
+$positio_relative: relative
+$position_absolute: absolute
+$background_color: #532fb8
+$background-color_shallow: #231649
+$_headerTopContent_border_bottom: 8px solid #231449
+$margin-left: auto
+$margin-right: auto
+$text-transform: initial
+$text-decoration: none
+$text_align_center: center
+$font_size_h1: 36px
+$font_family: serif
+$font-weight: 900
+$p_color: #686868
+$newsHeadlinesContent: 6px
+$newsHeadlinesContentSecondaryText: 11px
+$newsSecondaryLiContentText: 20px
+$font-family_Icon: "ForkAwesome"
+$font_size_Text: 11px
+$font-size_Title: 24px
+$padding-bottom: 6px
+$padding: 40px 10px
+
+// -------------------------------------------------- 
+
+@mixin flex_Box
+    flex: 0 0 50%
+    max-width: 50%
+
+@mixin flex_Box_480
+    flex: 0 0 90%
+    max-width: 90%
+
+@mixin serveAreaLi
+    width: 13%
+    line-height: 1.4
+    padding: 40px 36px
+    font-size: 13px
+    font-size: 14px
+    border: 1.6px solid #643bd4
+
+@mixin newsTitle
+    font-size: 24px
+    font-family: serif
+    font-style: oblique
+    position: $positio_relative
+    border-bottom: 1px solid $p_color
+    margin-bottom: 20px
+    padding-bottom: $padding-bottom
+    &:before
+        content: ""
+        width: 100px
+        position: $position_absolute
+        bottom: -2px
+        left: 0
+        border-bottom: 3px solid $background_color
+
+@mixin articleMenuLi
+    padding: 20px
+    margin-bottom: 16px
+    transition: 1s ease
+
+@mixin articleFilmMenuLiIcon
+    content: ""
+    border: 5px solid #686868
+    border-color: transparent transparent transparent #686868
+    position: $position_absolute
+    left: 0
+    top: 13px
+
+@mixin articleMenu_660
+    width: 90%
+    margin-bottom: 60px
+    margin-left: $margin-left
+    margin-right: $margin-right
+
+@mixin relatedLinksLi
+    line-height: 2
+    width: 18%
+    margin: 6px
+
+@mixin relatedLinksLiIcon
+    content: ""
+    border: 5px solid #fff
+    border-color: transparent transparent transparent #fff
+    position: $position_absolute
+    left: -10px
+    top: 13px
+    opacity: 0
+    transition: 1s ease
+
+@mixin hover_Icon
+    color: #fff
+    transition: 1s ease
+    background-color: #8c63ff
+
+// --------------------------------------------------       
+
+// serve
+.serve
+    position: $positio_relative
+    background-color: $background_color
+    display: $display
+    justify-content: $justify_content
+    .serveContent
+        max-width: $max-width
+        .serveArea
+            display: $display
+            flex-wrap: $flex-wrap
+            justify-content: $justify_content
+            .serveAreaLi
+                +serveAreaLi
+                &:hover > a > .serveAreaLiontent > .serveAreaIcon > .aku
+                    +hover_Icon
+                a
+                    text-decoration: $text-decoration
+                    .serveAreaLiontent
+                        margin: 0 auto
+                        .serveAreaIcon
+                            display: $display
+                            justify-content: $justify_content
+                            margin-bottom: 20px
+                            .aku
+                                width: 50px
+                                height: 50px
+                                font-size: 20px
+                                color: $background_color
+                                background-color: #fff
+                                border-radius: 50%
+                                display: $display
+                                justify-content: $justify_content
+                                align-items: $align-items
+                        .serveAreaTitle
+                            color: #fff
+                            font-weight: 400
+                            text-transform: uppercase
+                            text-align: center
+                        .serveAreaText
+                            color: #fff
+                            text-align: center
+
+@media screen and (max-width: 1140px)
+    .serve
+        .serveContent
+            .serveArea
+                .serveAreaLi
+                    width: 30%
+
+@media screen and (max-width: 480px)
+    .serve
+        .serveContent
+            .serveArea
+                .serveAreaLi
+                    width: 78%
+
+// --------------------------------------------------    
+
+// news        
+.news
+    position: $positio_relative
+    .newsContent
+        max-width: $max-width
+        display: $display
+        flex-wrap: $flex-wrap
+        justify-content: space-between
+        padding: $padding
+        margin-left: $margin-left
+        margin-right: $margin-right
+        .newsHeadlines
+            width: 66%
+            .newsHeadlinesTitle
+                +newsTitle
+            .newsHeadlinesContent
+                display: $display
+                flex-wrap: $flex-wrap
+                justify-content: space-between
+                .newsHeadlinesContentImg
+                    width: 46%
+                    height: 290px
+                    padding: 4px
+                    border: 1px solid $p_color
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                .newsHeadlinesContentSecondary
+                    width: 48%
+                    margin: $newsHeadlinesContent
+                    line-height: 2
+                    .newsHeadlinesContentSecondaryTitle
+                        font-size: $font-size_Title
+                        font-family: serif
+                        font-style: oblique
+                        padding-bottom: $padding-bottom
+                    .newsHeadlinesContentSecondaryText
+                        font-size: $newsHeadlinesContentSecondaryText
+                    .newsHeadlinesContentSecondaryUl
+                        font-size: $newsHeadlinesContentSecondaryText
+                        .newsHeadlinesContentSecondaryLi
+                            padding-left: 50px
+                            position: $positio_relative
+                            &:before
+                                content: "\2714"
+                                position: $position_absolute
+                                left: 30px
+                    .newsHeadlinesContentSecondarySpan
+                        font-size: $newsHeadlinesContentSecondaryText
+                    .newsHeadlinesContentSecondaryButton
+                        display: $inline_block
+                        background-color: $background_color
+                        transition: 1s ease
+                        margin-top: 10px
+                        &:hover
+                            background-color: #8c63ff
+                        a
+                            color: #fff
+                            padding: 10px
+                            text-decoration: $text-decoration
+        .newsSecondary
+            width: 28%
+            .newsSecondaryContnet
+                margin: 0 auto
+                .newsSecondaryTitle
+                    +newsTitle
+                .newsSecondarySecondary
+                    .newsSecondaryUl
+                        line-height: 2.5
+                        .newsSecondaryLi
+                            display: $display
+                            font-size: $newsHeadlinesContentSecondaryText
+                            margin-bottom: 24px
+                            .newsSecondaryLiDate
+                                width: 19%
+                                height: 60px
+                                padding: 4px
+                                text-align: $text_align_center
+                                display: $inline_block
+                                color: #fff
+                                background-color: $background_color
+                                border-radius: 6px
+                                .moon
+                                    width: 100%
+                                    display: $inline-block
+                                .day
+                                    width: 100%
+                                    height: 28px
+                                    display: $inline-block
+                                    background-color: #8c63ff
+                                    border-radius: 6px
+                            .newsSecondaryLiContent
+                                width: 80%
+                                line-height: 1.9
+                                .newsSecondaryLiContentTitle
+                                    margin-left: $newsSecondaryLiContentText
+                                    a
+                                        font-size: 16px
+                                        font-family: serif
+                                        font-style: oblique
+                                        text-decoration: $text-decoration
+                                .newsSecondaryLiContentText
+                                    margin-left: $newsSecondaryLiContentText
+
+@media screen and (max-width: 1024px)
+    .news
+        .newsContent
+            .newsHeadlines
+                width: 90%
+                margin-left: $margin-left
+                margin-right: $margin-right
+                margin-bottom: 60px
+            .newsSecondary
+                width: 90%
+                margin-left: $margin-left
+                margin-right: $margin-right
+
+@media screen and (max-width: 480px)
+    .news
+        .newsContent
+            .newsHeadlines
+                .newsHeadlinesContent
+                    .newsHeadlinesContentImg
+                        width: 100%
+                    .newsHeadlinesContentSecondary
+                        width: 100%
+
+// --------------------------------------------------    
+
+// article
+.article
+    position: $positio_relative
+    .articleContent
+        max-width: $max-width
+        margin-left: $margin-left
+        margin-right: $margin-right
+        display: $display
+        flex-wrap: $flex-wrap
+        justify-content: space-between
+        padding: $padding
+        .articleMenu
+            width: 30%
+            .articleMenuTitle
+                +newsTitle
+            .articleMenuUl
+                position: $positio_relative
+                .articleMenuLi
+                    +articleMenuLi
+                    &:nth-child(1)
+                        background-color: #84B533
+                        &:hover
+                            background-color: #a5df48
+                    &:nth-child(2)
+                        background-color: #FDA46A
+                        &:hover
+                            background-color: #ffcdab
+                    &:nth-child(3)
+                        background-color: #FFC600
+                        &:hover
+                            background-color: #ffdc5c
+                    &:nth-child(4)
+                        background-color: #B9282C
+                        &:hover
+                            background-color: #ff6b70
+                    a
+                        color: #fff
+                        display: $display
+                        text-decoration: $text-decoration
+                        .articleMenuLiIcon
+                            margin-right: 20px
+        .articleNews
+            width: 40%
+            .articleNewsTitle
+                +newsTitle
+            .articleNewsContent
+                display: $display
+                .articleNewsSection
+                    display: $display
+                    flex-wrap: $flex-wrap
+                    margin: 0 6px 0 6px
+                    .articleNewsSection1Content
+                        .articleNewsSectionImg
+                            width: 95%
+                            height: 150px
+                            display: $inline_block
+                            img
+                                width: 100%
+                                height: 100%
+                                object-fit: cover
+                                padding: 4px
+                                border: 1px solid $p_color
+                        .articleNewsSectionTitle
+                            padding: 20px 0
+                            color: $background_color
+                        .articleNewsDate
+                            position: $positio_relative
+                            .articleNewsLi
+                                display: $display
+                                margin-bottom: 20px
+                                .articleNewsYear
+                                    font-size: $font-size_Text
+                                    &::before
+                                        content: "\f073"
+                                        font-family: $font-family_Icon
+                                    sup
+                                .articleNewsMoon
+                                    font-size: $font-size_Text
+                                    margin-left: 10px
+                                    &:before
+                                        content: "\f040"
+                                        font-family: $font-family_Icon
+                                    a
+                                        text-decoration: $text-decoration
+                        .articleNewsSectionText
+                            font-size: $font-size_Text
+                            line-height: 1.6
+                        .articleNewsSectionButton
+                            padding: 10px
+                            display: inline-block
+                            background-color: #532fb8
+                            -webkit-transition: 1s ease
+                            transition: 1s ease
+                            margin-top: 10px
+                            &:hover
+                                background-color: #8c63ff
+                            a
+                                color: #fff
+                                text-decoration: none
+        .articleFilm
+            width: 25%
+            .articleFilmTitle
+                +newsTitle
+            .articleFilmAlbum
+                margin-bottom: 30px
+                video
+                    width: 100%
+                    height: 250px
+                    object-fit: cover
+                    display: $inline_block
+            .articleFilmMenu
+                .articleFilmMenuTitle
+                    +newsTitle
+                .articleFilmMenuUl
+                    position: $positio_relative
+                    line-height: 2.6
+                    .articleFilmMenuLi
+                        position: $positio_relative
+                        border-bottom: 1px solid $p_color
+                        &:hover > a
+                            color: $background_color
+                            &:before
+                                border: 5px solid $background_color
+                                border-color: transparent transparent transparent $background_color
+                        a
+                            font-size: $font_size_Text
+                            color: $p_color
+                            text-decoration: $text-decoration
+                            margin-left: 16px
+                            transition: 1s ease
+                            &:before
+                                +articleFilmMenuLiIcon
+
+@media screen and (max-width: 800px)
+    .article
+        .articleContent
+            .articleMenu
+                +articleMenu_660
+            .articleNews
+                +articleMenu_660
+            .articleFilm
+                +articleMenu_660
+
+@media screen and (max-width: 480px)
+    .article
+        .articleContent
+            .articleNews
+                .articleNewsContent
+                    flex-wrap: $flex-wrap
+                    .articleNewsSection
+                        width: 90%
+                        margin-bottom: 30px
+                        margin-left: $margin-left
+                        margin-right: $margin-right
+
+// --------------------------------------------------   
+
+.relatedLinks
+    position: $positio_relative
+    background-color: $background_color
+    .relatedLinksContent
+        max-width: $max-width
+        display: $display
+        flex-wrap: $flex-wrap
+        justify-content: $justify_content
+        padding: $padding
+        margin-left: auto
+        margin-right: auto
+        .relatedLinksTitle
+            width: 100%
+            text-align: $text_align_center
+            border-bottom: 1px solid #fff
+            h6
+                color: #fff
+                font-size: 24px
+                font-family: serif
+                font-style: oblique
+                padding-bottom: $padding-bottom
+        .relatedLinksUl
+            display: $display
+            flex-wrap: $flex-wrap
+            padding-top: 30px
+            margin-left: $margin-left
+            margin-right: $margin-right
+            justify-content: space-between
+            .relatedLinksLi
+                +relatedLinksLi
+                a
+                    text-decoration: $text-decoration
+                    color: #fff
+                    width: 100%
+                    display: inline-block
+                    position: $positio_relative
+                    &:before
+                        +relatedLinksLiIcon
+                    &:hover
+                        &:before
+                            opacity: 1
+
+@media screen and (max-width: 700px)
+    .relatedLinks
+        .relatedLinksContent
+            .relatedLinksUl
+                .relatedLinksLi
+                    width: 50%
+                    margin-left: $margin-left
+                    margin-right: $margin-right
+                    margin-bottom: 30px
+
+@media screen and (max-width: 480px)
+    .relatedLinks
+        .relatedLinksContent
+            .relatedLinksUl
+                .relatedLinksLi
+                    width: 90%
+                    margin-left: $margin-left
+                    margin-right: $margin-right
+                    margin-bottom: 30px
+
+// --------------------------------------------------    
+
+// goToTheTop
+#goToTheTop
+    display: block
+    a
+        position: fixed
+        right: 40px
+        bottom: 40px
+        width: 40px
+        height: 40px
+        display: inline-block
+        background-color: #fff
+        border-radius: 50%
+        -webkit-border-radius: 50%
+        -moz-border-radius: 50%
+        -ms-border-radius: 50%
+        -o-border-radius: 50%
+        transform: scale(1, 1)
+        -webkit-transform: scale(1, 1)
+        -moz-transform: scale(1, 1)
+        -ms-transform: scale(1, 1)
+        -o-transform: scale(1, 1)
+        transition: 1s ease-in-out
+        -webkit-transition: 0.4s ease-in-out
+        -moz-transition: 0.4s ease-in-out
+        -ms-transition: 0.4s ease-in-out
+        -o-transition: 0.4s ease-in-out
+        animation: topContentMove 1s infinite
+        -webkit-animation: topContentMove 1s infinite
+        @keyframes topContentMove
+            0%
+                transform: scale(0.5, 0.5)
+                -webkit-transform: scale(0.5, 0.5)
+                -moz-transform: scale(0.5, 0.5)
+                -ms-transform: scale(0.5, 0.5)
+                -o-transform: scale(0.5, 0.5)
+                -webkit-transform: scale(0.5, 0.5)
+            100%
+                transform: scale(1, 1)
+                -webkit-transform: scale(1, 1)
+                -moz-transform: scale(1, 1)
+                -ms-transform: scale(1, 1)
+                -o-transform: scale(1, 1)
+        span
+            &:nth-child(1)
+                width: 16px
+                height: 16px
+                display: inline-block
+                position: absolute
+                left: 29%
+                top: 37%
+                transform: rotate(45deg)
+                -webkit-transform: rotate(45deg)
+                -moz-transform: rotate(45deg)
+                -ms-transform: rotate(45deg)
+                -o-transform: rotate(45deg)
+                border-top: 2px solid $background_color
+                border-left: 2px solid $background_color
+            &:nth-child(2)
+                width: 1px
+                height: 50%
+                display: inline-block
+                background-color: white
+                position: absolute
+                left: 50%
+                top: 34%

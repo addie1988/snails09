@@ -1,0 +1,226 @@
+// 宣告變數
+$max-width: 1140px
+$display: flex
+$flex-wrap: wrap
+$display_none: none
+$align-items: center
+$justify_content: center
+$justify_content_left: left
+$justify_content_right: right
+$inline_block: inline-block
+$positio_relative: relative
+$position_absolute: absolute
+$background_color: #532fb8
+$_headerTopContent_border_bottom: 8px solid #231449
+$margin-left: auto
+$margin-right: auto
+$text-transform: initial
+$text-decoration: none
+$text_align_center: center
+$font_size_h1: 36px
+$font_family: serif
+$font-weight: 900
+$p_color: #686868
+$_menuDropDown: 240px
+$_menuDropDown_BackgroundColor: #000000a3
+$innerPageLi_A_Padding: 20px
+$padding_max480: 30px 20px
+
+// -------------------------------------------------- 
+
+@mixin innerPageLi
+    padding: 10px
+    display: $display
+    flex-wrap: $flex-wrap
+    position: $positio_relative
+    border-bottom: 1px solid #000000
+
+@mixin innerPageLiA
+    color: #fff
+    text-decoration: $text-decoration
+
+@mixin greyIcon
+    content: ""
+    border: 6px solid $p_color
+    width: 0
+    height: 0
+    border-color: $p_color transparent transparent transparent
+    position: $position_absolute
+    left: 0
+    top: 10px
+
+@mixin screen480Icon
+    content: ""
+    border: 6px solid $p_color
+    width: 0
+    height: 0
+    border-color: $p_color transparent transparent transparent
+    position: $position_absolute
+    right: 20px
+    top: 20px
+
+@mixin whiteIcon
+    content: ""
+    border: 6px solid #fff
+    width: 0
+    height: 0
+    border-color: #fff transparent transparent transparent
+    position: $position_absolute
+    left: 11px
+    top: 15px
+
+// --------------------------------------------------     
+
+// _menu    
+._menu
+    position: relative
+    background-color: #e0e0e0
+    border-top: 4px solid #c7c7c7
+    ._menuContent
+        max-width: $max-width
+        margin-left: $margin-left
+        margin-right: $margin-right
+        ._menuContentUl
+            display: $display
+            flex-wrap: $flex-wrap
+            align-items: $align-items
+            justify-content: left
+            ._menuContentLi
+                padding: 30px
+                transition: .5s ease-in-out
+                position: $positio_relative
+                &:nth-child(1) ._menuContentLiA
+                    padding-left: 0
+                &:hover
+                    background-color: $background_color
+                    ._menuContentLiA
+                        color: #fff
+                        &:before
+                            border: 6px solid #fff
+                            border-color: #fff transparent transparent transparent
+                &:nth-child(1)
+                    ._menuContentLiA
+                        &::before
+                            border: none
+                            border-color: transparent transparent transparent transparent
+
+                ._menuContentLiA
+                    color: $p_color
+                    text-decoration: $text-decoration
+                    position: $positio_relative
+                    padding-left: 20px
+                    &::before
+                        +greyIcon
+                .innerPage
+                    width: $_menuDropDown
+                    position: $position_absolute
+                    top: 76px
+                    left: 0
+                    background-color: $_menuDropDown_BackgroundColor
+                    display: $display_none
+                    z-index: 9999999999
+                    .innerPageLi
+                        +innerPageLi
+                        a
+                            +innerPageLiA
+                            padding-left: $innerPageLi_A_Padding
+                    .innerPageLiNexLevel
+                        +innerPageLi
+                        position: $positio_relative
+                        .innerPageLiNexLevelA
+                            +innerPageLiA
+                            padding-left: $innerPageLi_A_Padding
+                            &:before
+                                +whiteIcon
+                        .innerPageLiNexLevelUl
+                            position: $position_absolute
+                            width: 200px
+                            left: 241px
+                            top: 0
+                            display: $display_none
+                            background-color: $_menuDropDown_BackgroundColor
+                            .innerPageLiNexLevelLi
+                                padding: 10px
+                                a
+                                    color: #fff
+                                    .innerPageUl
+                                        width: $_menuDropDown
+                                        position: $position_absolute
+                                        background-color: $_menuDropDown_BackgroundColor
+                                        display: $display_none
+
+        .screen480
+            display: $display_none
+
+._menuActive
+    display: block
+
+.nexLevelContentActive
+    display: block
+
+@media screen and (max-width: 850px)
+    ._menu
+        ._menuContent
+            ._menuContentUl
+                display: $display_none
+                ._menuContentLi
+                    display: $display_none
+                    &:nth-child(2)
+                        width: 100%
+                        display: $display
+                        border: 1px solid #000
+                    a
+                        width: 100%
+                        padding-left: 0
+                        position: $positio_relative
+                        &:before
+                            right: 0
+                            top: 5px
+                            left: initial
+
+            .screen480
+                display: block
+                z-index: 999
+                position: $positio_relative
+                .screen480Button
+                    padding: 26px
+                    text-align: left
+                    display: $display
+                    justify-content: $justify_content
+                    .screen480ButtonContent
+                        width: 90%
+                        padding: 16px
+                        border: 1px solid $p_color
+                        position: $positio_relative
+                        &:before
+                            +screen480Icon
+                .screen480Ul
+                    display: $display
+                    justify-content: $justify_content
+                    .screen480ULContent
+                        position: $position_absolute
+                        width: 80%
+                        height: 100%
+                        overflow: auto
+                        padding: 26px
+                        border: 1px solid #000
+                        line-height: 2
+                        opacity: 0
+                        transition: 1s ease-out
+                        margin-left: $margin-left
+                        margin-right: $margin-right
+                        background-color: #e0e0e0
+                        box-shadow: 16px 10px 0px 0px #0000005e
+                        .screen480LiTitle
+                            a
+                                font-weight: 500
+                                font-size: 20px
+                                font-style: oblique
+                                color: $p_color
+                                text-decoration: $text-decoration
+                        .screen480Li
+                            list-style: none
+                            margin-left: 40px
+                            a
+                                color: $p_color
+                                text-decoration: $text-decoration

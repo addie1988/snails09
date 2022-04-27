@@ -1,0 +1,125 @@
+// 宣告變數
+$max-width: 1140px
+$display: flex
+$flex-wrap: wrap
+$display_none: none
+$align-items: center
+$justify_content: center
+$justify_content_left: left
+$justify_content_right: right
+$inline_block: inline-block
+$positio_relative: relative
+$position_absolute: absolute
+$background_color: #532fb8
+$background-color_shallow: #231649
+$_headerTopContent_border_bottom: 8px solid #231449
+$margin-left: auto
+$margin-right: auto
+$text-transform: initial
+$text-decoration: none
+$text_align_center: center
+$font_size_h1: 36px
+$font_family: serif
+$font-weight: 900
+$p_color: #686868
+$newsHeadlinesContent: 6px
+$newsHeadlinesContentSecondaryText: 11px
+$newsSecondaryLiContentText: 20px
+$font-family_Icon: "ForkAwesome"
+$font_size_Text: 11px
+$font-size_Title: 24px
+$padding-bottom: 6px
+$padding: 40px 10px
+
+// -------------------------------------------------- 
+
+@mixin hover_Icon
+    color: #fff
+    transition: 1s ease
+    background-color: #8c63ff
+
+// --------------------------------------------------     
+
+// footer   
+.footer
+    position: $positio_relative
+    background-color: $background-color_shallow
+    .footerContent
+        max-width: $max-width
+        margin-left: $margin-left
+        margin-right: $margin-right
+        padding: $padding
+        .footerUl
+            display: $display
+            flex-wrap: $flex-wrap
+            justify-content: space-between
+            margin-bottom: 40px
+            .footerLi
+                width: 22%
+                display: $display
+                justify-content: $justify_content
+                &:hover > a > .footerLiIcon
+                    +hover_Icon
+                a
+                    display: block
+                    text-decoration: $text-decoration
+                    position: $positio_relative
+                    .footerLiIcon
+                        width: 50px
+                        height: 50px
+                        font-size: 20px
+                        color: $background-color_shallow
+                        display: $display
+                        justify-content: $justify_content
+                        align-items: $align-items
+                        background-color: #fff
+                        margin-left: $margin-left
+                        margin-right: $margin-right
+                        border-radius: 50%
+                    .footerLiTitle
+                        color: #fff
+                        text-align: $text_align_center
+                        margin-left: $margin-left
+                        margin-right: $margin-right
+                        padding: 20px 0
+                    .footerText
+                        line-height: 1.6
+                        text-align: $text_align_center
+                        p
+                            color: #fff
+                            font-size: $font_size_Text
+                    form
+                        position: $positio_relative
+                        input
+                            &:nth-child(2)
+                                position: $positio_relative
+
+        .footerButton
+            display: $display
+            justify-content: $justify_content
+            padding-top: 40px
+            border-top: 1px solid #ffffff38
+            p
+                font-size: $font_size_Text
+                color: #fff
+                line-height: 1.6
+
+@media screen and (max-width: 700px)
+    .footer
+        .footerContent
+            .footerUl
+                .footerLi
+                    width: 50%
+                    margin-bottom: 20px
+                    &:nth-child(4)
+                        margin: 0
+
+@media screen and (max-width: 480px)
+    .footer
+        .footerContent
+            .footerUl
+                .footerLi
+                    width: 100%
+                    margin-bottom: 20px
+                    &:nth-child(4)
+                        margin: 0

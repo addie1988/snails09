@@ -1,0 +1,114 @@
+// 宣告變數
+$max-width: 1140px
+$display: flex
+$flex-wrap: wrap
+$display_none: none
+$align-items: center
+$justify_content: center
+$justify_content_left: left
+$justify_content_right: flex-end
+$inline_block: inline-block
+$positio_relative: relative
+$position_absolute: absolute
+$background_color: #532fb8
+$_headerTopContent_border_bottom: 8px solid #231449
+$margin-left: auto
+$margin-right: auto
+$text-transform: initial
+$text-decoration: none
+$text_align_center: center
+$font_size_h1: 36px
+$font_family: serif
+$font-weight: 900
+$p_color: #686868
+
+// --------------------------------------------------   
+
+@mixin flex_Box
+    flex: 0 0 50%
+    max-width: 50%
+
+@mixin flex_Box_480
+    flex: 0 0 90%
+    max-width: 90%
+
+// --------------------------------------------------       
+
+// header    
+._header
+    position: relative
+    ._headerContent
+        max-width: $max-width
+        margin-left: $margin-left
+        margin-right: $margin-right
+        display: $display
+        flex-wrap: $flex-wrap
+        align-items: $align-items
+        justify-content: $justify_content
+        padding: 30px 20px
+        line-height: 2
+        ._headerLogo
+            +flex_Box
+            line-height: 1
+            h1
+                text-transform: $text-transform
+                font-size: $font_size_h1
+                font-family: $font_family
+                font-weight: $font-weight
+        ._headerContactArea
+            +flex_Box
+            line-height: 1
+            ._headerContactAreaDetailed
+                display: $display
+                justify-content: $justify_content_right
+                ._headerContactAreaDetailedTelephone
+                    display: $display
+                    margin-right: 20px
+                    text-decoration: $text-decoration
+                    ._headerContactAreaDetailedTelephoneSpan
+                        color: $p_color
+                        margin-right: 10px
+                    ._headerContactAreaDetailedTelephoneText
+                        color: $p_color
+                ._headerContactAreaDetailedEmail
+                    display: $display
+                    text-decoration: $text-decoration
+                    ._headerContactAreaDetailedEmailvSpan
+                        color: $p_color
+                        margin-right: 10px
+                    ._headerContactAreaDetailedEmailText
+                        color: $p_color
+            ._headerContactAreaLogin
+                display: $display
+                justify-content: $justify_content_right
+                ._headerContactAreaLoginUl
+                    display: $display
+                    ._headerContactAreaLoginLi
+                        margin: 10px
+                        padding-right: 10px
+                        border-right: 1px solid #686868
+                        &:nth-child(4)
+                            border: none
+                            margin: 10px 0 10px 10px
+                            padding-right: 0
+                        a
+                            color: $p_color
+                            text-decoration: $text-decoration
+
+@media screen and (max-width: 600px)
+    ._header
+        ._headerContent
+            ._headerLogo
+                +flex_Box_480
+                text-align: $text_align_center
+            ._headerContactArea
+                +flex_Box_480
+                ._headerContactAreaDetailed
+                    display: $display
+                    flex-wrap: $flex-wrap
+                    justify-content: $justify_content
+                ._headerContactAreaLogin    
+                    justify-content: $justify_content
+                    ._headerContactAreaLoginUl
+                        flex-wrap: $flex-wrap
+                        justify-content: $justify_content

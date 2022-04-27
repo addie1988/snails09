@@ -1,0 +1,134 @@
+._headerTop {
+  position: relative;
+}
+
+._headerTop ._headerTopContent {
+  height: 3px;
+  overflow: hidden;
+  position: relative;
+  background-color: #532fb8;
+  border-bottom: 8px solid #231449;
+}
+
+._headerTop ._headerTopContent ._headerTopContentArea {
+  overflow: hidden;
+  max-width: 1140px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  padding: 30px 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+._headerTop ._headerTopContent ._headerTopContentArea ._headerTopSearch {
+  flex: 0 0 50%;
+  max-width: 50%;
+  display: flex;
+  justify-content: left;
+}
+
+._headerTop ._headerTopContent ._headerTopContentArea ._headerTopSearch form {
+  position: relative;
+  display: inline-block;
+}
+
+._headerTop ._headerTopContent ._headerTopContentArea ._headerTopSearch form input {
+  padding: 10px 0;
+}
+
+._headerTop ._headerTopContent ._headerTopContentArea ._headerTopSearch form ._headerTopSearchButtom {
+  position: absolute;
+  top: 0;
+  right: -3px;
+  padding: 10px 0;
+}
+
+._headerTop ._headerTopContent ._headerTopContentArea ._headerTopSearch form ._headerTopSearchButtom ._headerTopSearchButtomIcon {
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #865df7;
+}
+
+._headerTop ._headerTopContent ._headerTopContentArea ._headerTopInIcon {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+._headerTop ._headerTopContent ._headerTopContentArea ._headerTopInIcon ._headerTopInIconUl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+
+._headerTop ._headerTopContent ._headerTopContentArea ._headerTopInIcon ._headerTopInIconUl ._headerTopIn_headerTopInIconLI {
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px;
+  padding: 10px;
+  background-color: #fff;
+  transition: 1s ease-in-out;
+}
+
+._headerTop ._headerTopContent ._headerTopContentArea ._headerTopInIcon ._headerTopInIconUl ._headerTopIn_headerTopInIconLI:hover {
+  background-color: #865df7;
+}
+
+._headerTop ._headerTopContent ._headerTopContentArea ._headerTopInIcon ._headerTopInIconUl ._headerTopIn_headerTopInIconLI:hover a {
+  color: #fff;
+}
+
+._headerTop ._headerTopButton {
+  width: 50px;
+  height: 24px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #231449;
+  border-radius: 0 0 100px 100px;
+}
+
+._headerTop ._headerTopButton::before {
+  content: " ";
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  left: 32%;
+  top: 6px;
+  z-index: 3;
+  display: inline-block;
+  border: 2px solid #fff;
+  border-color: #fff #fff transparent transparent;
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 480px) {
+  ._headerTop ._headerTopContent ._headerTopContentArea ._headerTopSearch {
+    flex: 0 0 90%;
+    max-width: 90%;
+    margin: 8px;
+    justify-content: center;
+  }
+  ._headerTop ._headerTopContent ._headerTopContentArea ._headerTopSearch form > input {
+    width: 100%;
+  }
+  ._headerTop ._headerTopContent ._headerTopContentArea ._headerTopInIcon {
+    flex: 0 0 90%;
+    max-width: 90%;
+    margin: 8px;
+  }
+  ._headerTop ._headerTopContent ._headerTopContentArea ._headerTopInIcon ._headerTopInIconUl {
+    justify-content: center;
+  }
+  ._headerTop ._headerTopButton {
+    top: 0;
+  }
+}

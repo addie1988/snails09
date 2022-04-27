@@ -1,0 +1,6 @@
+.footer {
+  position: relative;
+}
+.footer .footerContent {
+  max-width: 1140px;
+}

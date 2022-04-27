@@ -1,0 +1,37 @@
+._menu {
+  position: relative;
+}
+._menu ._menuContent {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+._menu ._menuContent ._menuContentUl {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: left;
+}
+._menu ._menuContent ._menuContentUl ._menuContentLi {
+  padding: 20px;
+}
+._menu ._menuContent ._menuContentUl ._menuContentLi a {
+  color: #686868;
+  text-decoration: none;
+  position: relative;
+  padding-left: 20px;
+}
+._menu ._menuContent ._menuContentUl ._menuContentLi a:nth-child(1):before {
+  border: none;
+  border-color: transparent transparent transparent transparent;
+}
+._menu ._menuContent ._menuContentUl ._menuContentLi a::before {
+  content: "";
+  border: 6px solid #686868;
+  width: 0;
+  height: 0;
+  border-color: #686868 transparent transparent transparent;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}

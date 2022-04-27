@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snails09</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css"
+        integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    <style>
+        @import "./sass/style.css";
+    </style>
+</head>
+
+<body>
+
+    <!-- goToTheTop -->
+    <a name="top"></a>
+
+
+
+
+    <!-- ---------------------------------------------------------------------- -->
+
+
+
+
+    <!-- _headerTop -->
+    <div class="_headerTop">
+        <div class="_headerTopContent" id="_headerTopContentShow">
+            <div class="_headerTopContentArea">
+                <div class="_headerTopSearch">
+                    <form>
+                        <input type="text" size="35" class="_headerTopSearchStyle">
+                        <span class="_headerTopSearchButtom"><i class="fa fa-search _headerTopSearchButtomIcon"
+                                aria-hidden="true"></i></span>
+                    </form>
+                </div>
+                <div class="_headerTopInIcon">
+                    <ul class="_headerTopInIconUl">
+                        <li class="_headerTopIn_headerTopInIconLI"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li class="_headerTopIn_headerTopInIconLI"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li class="_headerTopIn_headerTopInIconLI"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li class="_headerTopIn_headerTopInIconLI"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li class="_headerTopIn_headerTopInIconLI"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li class="_headerTopIn_headerTopInIconLI"><a href="#"><i class="fa fa-google-plus"></i></a>
+                        </li>
+                        <li class="_headerTopIn_headerTopInIconLI"><a href="#"><i class="fa fa-skype"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="_headerTopButton" id="_headerTopButtonControl"></div>
+    </div>
+
+
+
+    <!-- ---------------------------------------------------------------------- -->
+
+
+
+    <!-- _header -->
+    <div class="_header">
+        <div class="_headerContent">
+            <div class="_headerLogo">
+                <h1>Book Of Wisdom</h1>
+                <p>University Of Hard Knocks</p>
+            </div>
+            <div class="_headerContactArea">
+                <div class="_headerContactAreaDetailed">
+                    <a href="tel:+00 (123) 456 7890 " class="_headerContactAreaDetailedTelephone">
+                        <div class="_headerContactAreaDetailedTelephoneSpan"><i class="fa fa-phone"></i></div>
+                        <div class="_headerContactAreaDetailedTelephoneText">+00 (123) 456 7890</div>
+                    </a>
+                    <a href="mailto:info@domain.com" class="_headerContactAreaDetailedEmail">
+                        <span class="_headerContactAreaDetailedEmailvSpan"><i class="fa fa-envelope-o"></i></span>
+                        <div class="_headerContactAreaDetailedEmailText">info@domain.com</div>
+                    </a>
+                </div>
+                <div class="_headerContactAreaLogin">
+                    <ul class="_headerContactAreaLoginUl">
+                        <li class="_headerContactAreaLoginLi"><a href="#">Home</a></li>
+                        <li class="_headerContactAreaLoginLi"><a href="#">A - Z Index</a></li>
+                        <li class="_headerContactAreaLoginLi"><a href="#">Student Login</a></li>
+                        <li class="_headerContactAreaLoginLi"><a href="#">Staff Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ---------------------------------------------------------------------- -->
+
+
+
+    <!-- _menu -->
+    <div class="_menu">
+        <div class="_menuContent">
+
+            <ul class="_menuContentUl">
+                <li class="_menuContentLi"><a href="#" class="_menuContentLiA" id="_menuContentLiId"
+                        title="Home">Home</a></li>
+                <li class="_menuContentLi">
+                    <a href="#" class="_menuContentLiA" onclick="opencity(event, 'PagesIdContent')" id="PagesId"
+                        title="Pages">Pages</a>
+                    <ul class="innerPage" id="PagesIdContent">
+                        <li class="innerPageLi"><a href="#">About Us</a></li>
+                        <li class="innerPageLi"><a href="#">Contact</a></li>
+                        <li class="innerPageLiNexLevel" onclick="nexLevelContent(event, 'teamId')">
+                            <a href="#" class="innerPageLiNexLevelA">Team / Staff</a>
+                            <ul class="innerPageLiNexLevelUl" id="teamId">
+                                <li class="innerPageLi">
+                                    <a href="#">Team/Staff Member</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="innerPageLiNexLevel" onclick="nexLevelContent(event, 'courseId')">
+                            <a href="#" class="innerPageLiNexLevelA">Course Overview</a>
+                            <ul class="innerPageLiNexLevelUl" id="courseId">
+                                <li class="innerPageLi"><a href="#">Single Course</a></li>
+                                <li class="innerPageLi"><a href="#">Weekly Timetable</a></li>
+                            </ul>
+                        </li>
+                        <li class="innerPageLi"><a href="#">FAQ</a></li>
+                        <li class="innerPageLi"><a href="#">Archives</a></li>
+                        <li class="innerPageLi"><a href="#">404</a></li>
+                        <li class="innerPageLi"><a href="#">HTML Sitemap</a></li>
+                    </ul>
+                </li>
+                <li class="_menuContentLi">
+                    <a href="#" class="_menuContentLiA" onclick="opencity(event, 'ElementsIdContent')" id="ElementsId"
+                        title="Elements">Elements</a>
+                    <ul class="innerPage" id="ElementsIdContent">
+                        <li class="innerPageLi"><a href="#">Buttons</a></li>
+                        <li class="innerPageLi"><a href="#">Alert Messages</a></li>
+                        <li class="innerPageLi"><a href="#">Font Icons</a></li>
+                        <li class="innerPageLi"><a href="#">Social Icons</a></li>
+                        <li class="innerPageLi"><a href="#">Call To Action</a></li>
+                        <li class="innerPageLi"><a href="#">Columns</a></li>
+                        <li class="innerPageLi"><a href="#">Columns - No Gutter</a></li>
+                        <li class="innerPageLi"><a href="#">Lists</a></li>
+                        <li class="innerPageLi"><a href="#">Accordions, Toggles &amp; Tabs</a></li>
+                        <li class="innerPageLi"><a href="#">Pricing Tables</a></li>
+                        <li class="innerPageLi"><a href="#">Misc. Typography</a></li>
+                        <li class="innerPageLi"><a href="#">Slider + Lightbox</a></li>
+                        <li class="innerPageLi"><a href="#">Media</a></li>
+                        <li class="innerPageLi"><a href="#">Tables</a></li>
+                    </ul>
+                </li>
+                <li class="_menuContentLi">
+                    <a href="#" class="_menuContentLiA" onclick="opencity(event, 'BlogIdContent')" id="BlogId"
+                        title="Blog Layouts">Blog</a>
+                    <ul class="innerPage" id="BlogIdContent">
+                        <li class="innerPageLiNexLevel" onclick="nexLevelContent(event, 'OverviewId')">
+                            <a href="#" class="innerPageLiNexLevelA">Blog Overview</a>
+                            <ul class="innerPageLiNexLevelUl" id="OverviewId">
+                                <li class="innerPageLi"><a href="#">Full Width</a></li>
+                                <li class="innerPageLi"><a href="#">Sidebar Left</a></li>
+                                <li class="innerPageLi"><a href="#">Sidebar Right</a></li>
+                                <li class="innerPageLi"><a href="#">2 Col. Grid</a></li>
+                            </ul>
+                        </li>
+                        <li class="innerPageLiNexLevel" onclick="nexLevelContent(event, 'PostId')">
+                            <a href="#" class="innerPageLiNexLevelA">Blog Post</a>
+                            <ul class="innerPageLiNexLevelUl" id="PostId">
+                                <li class="innerPageLi"><a href="#">Full Width</a></li>
+                                <li class="innerPageLi"><a href="#">Sidebar Left</a></li>
+                                <li class="innerPageLi"><a href="#">Sidebar Right</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="_menuContentLi">
+                    <a href="#" class="_menuContentLiA" onclick="opencity(event, 'PortfolioIdContent')" id="PortfolioId"
+                        title="Portfolio Layouts">Portfolio</a>
+                    <ul class="innerPage" id="PortfolioIdContent">
+                        <li class="innerPageLiNexLevel" onclick="nexLevelContent(event, 'portfolioOverviewId')">
+                            <a href="#" class="innerPageLiNexLevelA">Portfolio Overview</a>
+                            <ul class="innerPageLiNexLevelUl" id="portfolioOverviewId">
+                                <li class="innerPageLi"><a href="#">Full Width</a></li>
+                                <li class="innerPageLi"><a href="#">Sidebar Left</a></li>
+                                <li class="innerPageLi"><a href="#">Sidebar Right</a></li>
+                                <li class="innerPageLi"><a href="#">2 Col. Grid</a></li>
+                            </ul>
+                        </li>
+                        <li class="innerPageLiNexLevel" onclick="nexLevelContent(event, 'portfolioPostId')">
+                            <a href="#" class="innerPageLiNexLevelA">Portfolio Post</a>
+                            <ul class="innerPageLiNexLevelUl" id="portfolioPostId">
+                                <li class="innerPageLi"><a href="#">Full Width</a></li>
+                                <li class="innerPageLi"><a href="#">Sidebar Left</a></li>
+                                <li class="innerPageLi"><a href="#">Sidebar Right</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="_menuContentLi">
+                    <a href="#" class="_menuContentLiA" onclick="opencity(event, 'GalleryIdContent')" id="GalleryId"
+                        title="Gallery Layouts">Gallery</a>
+                    <ul class="innerPage" id="GalleryIdContent">
+                        <li class="innerPageLi"><a href="#">Full Width</a></li>
+                        <li class="innerPageLi"><a href="#">2 Col. Grid</a></li>
+                        <li class="innerPageLi"><a href="#">3 Col. Grid</a></li>
+                        <li class="innerPageLi"><a href="#">4 Col. Grid</a></li>
+                        <li class="innerPageLi"><a href="#">5 Col. Grid</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+
+
+
+            <!-- screen480 -->
+            <form class="screen480">
+                <div class="screen480Button" id="screen480Restraint">
+                    <div class="screen480ButtonContent">
+                        <p>MENU</p>
+                    </div>
+                </div>
+                <div class="screen480Ul">
+                    <ul class="screen480ULContent" id="screen480Restraint_Goal">
+                        <li class="screen480LiTitle"><a href="#">Home</a></li>
+                        <li class="screen480LiTitle"><a href="#">Pages</a></li>
+                        <li class="screen480Li"><a href="#">- About Us</a></li>
+                        <li class="screen480Li"><a href="#">- Contact</a></li>
+                        <li class="screen480Li"><a href="#">- Team / Staff</a></li>
+                        <li class="screen480Li"><a href="#">- - Team / Staff Member</a></li>
+                        <li class="screen480Li"><a href="#">- Course Overview</a></li>
+                        <li class="screen480Li"><a href="#">- - Single Course</a></li>
+                        <li class="screen480Li"><a href="#">- - Weekly Timetable</a></li>
+                        <li class="screen480Li"><a href="#">- FAQ</a></li>
+                        <li class="screen480Li"><a href="#">- Archives</a></li>
+                        <li class="screen480Li"><a href="#">- 404</a></li>
+                        <li class="screen480Li"><a href="#">- HTML Sitemap</a></li>
+                        <li class="screen480LiTitle"><a href="#">Elements</a></li>
+                        <li class="screen480Li"><a href="#">- Buttons</a></li>
+                        <li class="screen480Li"><a href="#">- Alert Messages</a></li>
+                        <li class="screen480Li"><a href="#">- Font Icons</a></li>
+                        <li class="screen480Li"><a href="#">- Social Icons</a></li>
+                        <li class="screen480Li"><a href="#">- Call To Action</a></li>
+                        <li class="screen480Li"><a href="#">- Columns</a></li>
+                        <li class="screen480Li"><a href="#">- Columns - No Gutter</a></li>
+                        <li class="screen480Li"><a href="#">- Lists</a></li>
+                        <li class="screen480Li"><a href="#">- Accordions, Toggles & Tabs</a></li>
+                        <li class="screen480Li"><a href="#">- Pricing Tables</a></li>
+                        <li class="screen480Li"><a href="#">- Misc. Typography</a></li>
+                        <li class="screen480Li"><a href="#">- Slider + Lightbox</a></li>
+                        <li class="screen480Li"><a href="#">- Media</a></li>
+                        <li class="screen480Li"><a href="#">- Tables</a></li>
+                        <li class="screen480LiTitle"><a href="#">Blog</a></li>
+                        <li class="screen480Li"><a href="#">- Blog Overview</a></li>
+                        <l class="screen480Li" i><a href="#">- - Full Width</a></l>
+                        <li class="screen480Li"><a href="#">- - Sidebar Left</a></li>
+                        <li class="screen480Li"><a href="#">- - Sidebar Right</a></li>
+                        <li class="screen480Li"><a href="#">- - 2 Col. Grid</a></li>
+                        <li class="screen480Li"><a href="#">- Blog Post</a></li>
+                        <li class="screen480Li"><a href="#">- - Full Width</a></li>
+                        <li class="screen480Li"><a href="#">- - Sidebar Left</a></li>
+                        <li class="screen480Li"><a href="#">- - Sidebar Right</a></li>
+                        <li class="screen480LiTitle"><a href="#">Portfolio</a></li>
+                        <li class="screen480Li"><a href="#">- Portfolio Overview</a></li>
+                        <li class="screen480Li"><a href="#">- - Full Width</a></li>
+                        <li class="screen480Li"><a href="#">- - Sidebar Left</a></li>
+                        <li class="screen480Li"><a href="#">- - Sidebar Right</a></li>
+                        <li class="screen480Li"><a href="#">- - 2 Col. Grid</a></li>
+                        <li class="screen480Li"><a href="#">- Portfolio Post</a></li>
+                        <li class="screen480Li"><a href="#">- - Full Width</a></li>
+                        <li class="screen480Li"><a href="#">- - Sidebar Left</a></li>
+                        <li class="screen480Li"><a href="#">- - Sidebar Right</a></li>
+                        <li class="screen480LiTitle"><a href="#">Gallery</a></li>
+                        <li class="screen480Li"><a href="#">- Full Width</a></li>
+                        <li class="screen480Li"><a href="#">- 2 Col. Grid</a></li>
+                        <li class="screen480Li"><a href="#">- 3 Col. Grid</a></li>
+                        <li class="screen480Li"><a href="#">- 4 Col. Grid</a></li>
+                        <li class="screen480Li"><a href="#">- 5 Col. Grid</a></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- ---------------------------------------------------------------------- -->
+
+
+
+    <!-- _banner -->
+    <div class="_banner">
+        <div class="_bannerContent">
+            <div class="__bannerContentImg">
+                <img src="./images/banner_1.jpg">
+            </div>
+            <div class="__bannerContentImg">
+                <img src="./images/banner_2.jpg">
+            </div>
+            <div class="__bannerContentImg">
+                <img src="./images/banner_3.jpg">
+            </div>
+            <div class="_bannerButton">
+                <div class="_bannerButtonContent">
+                    <span class="_bannerDot" onclick="_bannerDotControl(1)"></span>
+                    <span class="_bannerDot" onclick="_bannerDotControl(2)"></span>
+                    <span class="_bannerDot" onclick="_bannerDotControl(3)"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ---------------------------------------------------------------------- -->
+
+
+
+    <!-- serve -->
+    <div class="serve">
+        <div class="serveContent">
+            <ul class="serveArea">
+                <li class="serveAreaLi">
+                    <a href="#">
+                        <div class="serveAreaLiontent">
+                            <div class="serveAreaIcon"><i class="aku aid fa fa-flag"></i></div>
+                            <div class="serveAreaTitle">
+                                <h6>Ullamcorper mauris</h6>
+                            </div>
+                            <div class="serveAreaText">
+                                <p>urna consequat velit</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="serveAreaLi">
+                    <a href="#">
+                        <div class="serveAreaLiontent">
+                            <div class="serveAreaIcon"><i class="aku aid fa fa-book"></i></div>
+                            <div class="serveAreaTitle">
+                                <h6>Facilisis volutpat</h6>
+                            </div>
+                            <div class="serveAreaText">
+                                <p>eget elit sit amet</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="serveAreaLi">
+                    <a href="#">
+                        <div class="serveAreaLiontent">
+                            <div class="serveAreaIcon"><i class="aku aid fa fa-trophy"></i></div>
+                            <div class="serveAreaTitle">
+                                <h6>Maecenas libero</h6>
+                            </div>
+                            <div class="serveAreaText">
+                                <p>urna sit amet pulvinar</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="serveAreaLi">
+                    <a href="#">
+                        <div class="serveAreaLiontent">
+                            <div class="serveAreaIcon"><i class="aku aid fa fa-group"></i></div>
+                            <div class="serveAreaTitle">
+                                <h6>Blandit elementum</h6>
+                            </div>
+                            <div class="serveAreaText">
+                                <p>dui leo egestas augue</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="serveAreaLi">
+                    <a href="#">
+                        <div class="serveAreaLiontent">
+                            <div class="serveAreaIcon"><i class="aku aid fa fa-legal"></i></div>
+                            <div class="serveAreaTitle">
+                                <h6>Etiam scelerisque</h6>
+                            </div>
+                            <div class="serveAreaText">
+                                <p>eget molestie augue</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!-- ---------------------------------------------------------------------- -->
+
+
+
+    <!-- news -->
+    <div class="news">
+        <div class="newsContent">
+            <div class="newsHeadlines">
+                <div class="newsHeadlinesTitle">
+                    <h6>Lorem Ipsum Dolor</h6>
+                </div>
+                <div class="newsHeadlinesContent">
+                    <div class="newsHeadlinesContentImg"><img src="./images/news.jpg"></div>
+                    <div class="newsHeadlinesContentSecondary">
+                        <div class="newsHeadlinesContentSecondaryTitle">
+                            <h6>Lorem Ipsum Dolor Sit Amet Consec Adipiscing.</h6>
+                        </div>
+                        <p class="newsHeadlinesContentSecondaryText">Curabitur eget elit sit amet purus congue lacinia.
+                            Donec facilisis volutpat ligula nec egestas aliquam malesuada.</p>
+                        <ul class="newsHeadlinesContentSecondaryUl">
+                            <li class="newsHeadlinesContentSecondaryLi">Lorem ipsum dolor sit amet, consectetur.</li>
+                            <li class="newsHeadlinesContentSecondaryLi">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing.</li>
+                            <li class="newsHeadlinesContentSecondaryLi">Lorem ipsum dolor sit amet, consectetur vivamus.
+                            </li>
+                        </ul>
+                        <div class="newsHeadlinesContentSecondarySpan">Lectus sed vestibulum sollicitudin, mi urna
+                            consequat velit.</div>
+                        <div class="newsHeadlinesContentSecondaryButton">
+                            <a href="#">Read More »</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="newsSecondary">
+                <div class="newsSecondaryContnet">
+                    <div class="newsSecondaryTitle">Upcoming Events</div>
+                    <div class="newsSecondarySecondary">
+                        <ul class="newsSecondaryUl">
+                            <li class="newsSecondaryLi">
+                                <time datetime="2000-01-21T08:15+00:00" class="newsSecondaryLiDate">
+                                    <strong class="moon">Jan</strong>
+                                    <em class="day">21</em>
+                                </time>
+                                <div class="newsSecondaryLiContent">
+                                    <div class="newsSecondaryLiContentTitle"><a href="#">Fusce Quis Feugiat</a></div>
+                                    <div class="newsSecondaryLiContentText">
+                                        <p>Curabitur eget elit sit amet purus congue lacinia…</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="newsSecondaryLi">
+                                <time datetime="2000-02-11T08:15+00:00" class="newsSecondaryLiDate">
+                                    <strong class="moon">Feb</strong>
+                                    <em class="day">11</em>
+                                </time>
+                                <div class="newsSecondaryLiContent">
+                                    <div class="newsSecondaryLiContentTitle"><a href="#">Fusce Quis Feugiat</a></div>
+                                    <div class="newsSecondaryLiContentText">
+                                        <p>Curabitur eget elit sit amet purus congue lacinia…</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="newsSecondaryLi">
+                                <time datetime="2000-01-18T08:15+00:00" class="newsSecondaryLiDate">
+                                    <strong class="moon">Feb</strong>
+                                    <em class="day">18</em>
+                                </time>
+                                <div class="newsSecondaryLiContent">
+                                    <div class="newsSecondaryLiContentTitle"><a href="#">Fusce Quis Feugiat</a></div>
+                                    <div class="newsSecondaryLiContentText">
+                                        <p>Curabitur eget elit sit amet purus congue lacinia…</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ---------------------------------------------------------------------- -->
+
+
+
+    <!-- article -->
+    <div class="article">
+        <div class="articleContent">
+            <div class="articleMenu">
+                <div class="articleMenuTitle">
+                    <h6>Lorem Ipsum Dolor</h6>
+                </div>
+                <ul class="articleMenuUl">
+                    <li class="articleMenuLi">
+                        <a href="#">
+                            <div class="articleMenuLiIcon"><i class="fa fa-shield fa-2x ako"></i></div>
+                            <div class="articleMenuLiContent">
+                                <p>Lorem Ipsum Dolor</p>
+                                <p>Aenean semper elementum</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="articleMenuLi">
+                        <a href="#">
+                            <div class="articleMenuLiIcon"><i class="fa fa-puzzle-piece fa-2x ako"></i></div>
+                            <div class="articleMenuLiContent">
+                                <p>Lorem Ipsum Dolor</p>
+                                <p>Aenean semper elementum</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="articleMenuLi">
+                        <a href="#">
+                            <div class="articleMenuLiIcon"><i class="fa fa-building fa-2x ako"></i></div>
+                            <div class="articleMenuLiContent">
+                                <p>Lorem Ipsum Dolor</p>
+                                <p>Aenean semper elementum</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="articleMenuLi">
+                        <a href="#">
+                            <div class="articleMenuLiIcon"><i class="fa fa-paperclip fa-2x ako"></i></div>
+                            <div class="articleMenuLiContent">
+                                <p>Lorem Ipsum Dolor</p>
+                                <p>Aenean semper elementum</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="articleNews">
+                <div class="articleNewsTitle">
+                    <h6>Lorem Ipsum Dolor</h6>
+                </div>
+                <div class="articleNewsContent">
+                    <div class="articleNewsSection">
+                        <div class="articleNewsSection1Content">
+                            <div class="articleNewsSectionImg"><img src="./images/article1.jpg"></img></div>
+                            <div class="articleNewsSectionTitle">
+                                <h6>Fusce Quis Feugiat</h6>
+                            </div>
+                            <ul class="articleNewsDate">
+                                <li class="articleNewsLi">
+                                    <time class="articleNewsYear" datetime="2000-04-06T08:15+00:00">6 <sup>th</sup>
+                                        April
+                                        2000</time>
+                                    <div class="articleNewsMoon">By<a href="#">admin</a></div>
+                                </li>
+                            </ul>
+                            <div class="articleNewsSectionText">
+                                <p>Curabitur eget elit sit amet purus congue lacinia. Donec facilisis volutpat ligula
+                                    nec egestas. Aliquam malesuada, lectus sed vestibulum sollicitudin, mi urna
+                                    consequat velit, id ullamcorper risus lacus ut ante. Donec sed ultrices eros. Nulla
+                                    facilisi. Aliquam purus urna, porta non faucibus nec…</p>
+                            </div>
+                            <div class="articleNewsSectionButton"><a href="#">Read More »</a></div>
+                        </div>
+                    </div>
+                    <div class="articleNewsSection">
+                        <div class="articleNewsSection1Content">
+                            <div class="articleNewsSectionImg"><img src="./images/article2.jpg"></div>
+                            <div class="articleNewsSectionTitle">
+                                <h6>Fusce Quis Feugiat</h6>
+                            </div>
+                            <ul class="articleNewsDate">
+                                <li class="articleNewsLi">
+                                    <time class="articleNewsYear" datetime="2000-04-06T08:15+00:00">6<sup>th</sup> April
+                                        2000</time>
+                                    <div class="articleNewsMoon">By<a href="#">admin</a></div>
+                                </li>
+                            </ul>
+                            <div class="articleNewsSectionText">
+                                <p>Curabitur eget elit sit amet purus congue lacinia. Donec facilisis volutpat ligula
+                                    nec egestas. Aliquam malesuada, lectus sed vestibulum sollicitudin, mi urna
+                                    consequat velit, id ullamcorper risus lacus ut ante. Donec sed ultrices eros. Nulla
+                                    facilisi. Aliquam purus urna, porta non faucibus nec…</p>
+                            </div>
+                            <div class="articleNewsSectionButton"><a href="#">Read More »</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="articleFilm">
+                <div class="articleFilmTitle">
+                    <h6>Video Tour</h6>
+                </div>
+                <div class="articleFilmAlbum">
+                    <video muted controls autoplay loop autoplay="autoplay">
+                        <source src="./images/200910_03_Oxford_4K_008.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="articleFilmMenu">
+                    <div class="articleFilmMenuTitle">
+                        <h6>Sidebar Navigation</h6>
+                    </div>
+                    <ul class="articleFilmMenuUl">
+                        <li class="articleFilmMenuLi"><a href="#">Category Link 1</a></li>
+                        <li class="articleFilmMenuLi"><a href="#">Category Link 2</a></li>
+                        <li class="articleFilmMenuLi"><a href="#">Category Link 3</a></li>
+                        <li class="articleFilmMenuLi"><a href="#">Category Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- ---------------------------------------------------------------------- -->
+
+
+
+
+    <!-- relatedLinks -->
+    <div class="relatedLinks">
+        <div class="relatedLinksContent">
+            <div class="relatedLinksTitle">
+                <h6>Optional block of links</h6>
+            </div>
+            <ul class="relatedLinksUl">
+                <li class="relatedLinksLi">
+                    <a href="#">Academic Advisory</a>
+                    <a href="#">Academic Assistance</a>
+                    <a href="#">Academic Calendars</a>
+                    <a href="#">Academics Office</a>
+                    <a href="#">Administration</a>
+                    <a href="#">Adult Learners</a>
+                    <a href="#">Alumni Chapters</a>
+                    <a href="#">Alumni Events</a>
+                    <a href="#">Athletics</a>
+                    <a href="#">Campus Life At a Glance
+                    </a>
+                    <a href="#">Campus Recreation</a>
+                    <a href="#">Campus Safety & Security</a>
+                </li>
+                <li class="relatedLinksLi">
+                    <a href="#">Class Schedules</a>
+                    <a href="#">Counselling Center</a>
+                    <a href="#">Course Catalogue</a>
+                    <a href="#">Department Directory</a>
+                    <a href="#">Departments & Programs</a>
+                    <a href="#">Fellowships</a>
+                    <a href="#">Finals Schedules</a>
+                    <a href="#">Financial Aid</a>
+                    <a href="#">Fitness and Rec. Facilities
+                    </a>
+                    <a href="#">Global Learning</a>
+                    <a href="#">Graduate</a>
+                    <a href="#">Graduate Admissions</a>
+                </li>
+                <li class="relatedLinksLi">
+                    <a href="#">Graduate Courses</a>
+                    <a href="#">Graduate Health Services</a>
+                    <a href="#">Graduate Housing
+                    </a>
+                    <a href="#">Graduate Programs</a>
+                    <a href="#">Graduate Student Association</a>
+                    <a href="#">Graduate Studies</a>
+                    <a href="#">Honours Program</a>
+                    <a href="#">Interactive Schedule</a>
+                    <a href="#">International Programs</a>
+                    <a href="#">International Students</a>
+                    <a href="#">International Students</a>
+                    <a href="#">Intramural Sports</a>
+                </li>
+                <li class="relatedLinksLi">
+                    <a href="#">Language Resources</a>
+                    <a href="#">Lifelong Learning</a>
+                    <a href="#">Maps and Directions</a>
+                    <a href="#">Maps and Directions</a>
+                    <a href="#">Office of the Registrar</a>
+                    <a href="#">Online Learning</a>
+                    <a href="#">Parent Information</a>
+                    <a href="#">Postgraduate Research
+                    </a>
+                    <a href="#">Postgraduate Taught</a>
+                    <a href="#">Residence Life</a>
+                    <a href="#">Residential Colleges</a>
+                    <a href="#">Schools and Colleges</a>
+                </li>
+                <li class="relatedLinksLi">
+                    <a href="#">Student Activities</a>
+                    <a href="#">Student Affairs</a>
+                    <a href="#">Student Development</a>
+                    <a href="#">Student Financial Services</a>
+                    <a href="#">Student Group Directory</a>
+                    <a href="#">Student Life</a>
+                    <a href="#">Student Research</a>
+                    <a href="#">Students with Disabilities</a>
+                    <a href="#">Transfer Students
+                    </a>
+                    <a href="#">Undergraduate Admissions</a>
+                    <a href="#">Undergraduate Courses</a>
+                    <a href="#">Undergraduate Housing</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <!-- ---------------------------------------------------------------------- -->
+
+
+
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="footerContent">
+            <ul class="footerUl">
+                <li class="footerLi">
+                    <a href="#">
+                        <div class="footerLiIcon"><i class="aku aid fa fa-map-marker"></i></div>
+                        <div class="footerLiTitle">Address</div>
+                        <div class="footerText">
+                            <p>Street Name & Number,</p>
+                            <p>Town, Postcode/Zip</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="footerLi">
+                    <a href="#">
+                        <div class="footerLiIcon"><i class="aku aid fa fa-phone"></i></div>
+                        <div class="footerLiTitle">phone</div>
+                        <div class="footerText">
+                            <P>1001000 1101001</P>
+                            <p>1001000 1101001</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="footerLi">
+                    <a href="#">
+                        <div class="footerLiIcon"><i class="aku aid fa fa-envelope-o"></i></div>
+                        <div class="footerLiTitle">Email</div>
+                        <div class="footerText">
+                            <p>info@yourdomain.com</p>
+                            <p>support@yourdomain.com</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="footerLi">
+                    <a href="#">
+                        <div class="footerLiIcon"><i class="aku aid fa fa-file-text-o"></i></div>
+                        <div class="footerLiTitle">Newsletter</div>
+                        <form method="get" action="#">
+                            <input type="text"></input>
+                            <input type="submit" value="Subscribe"></input>
+                        </form>
+                    </a>
+                </li>
+            </ul>
+            <div class="footerButton">
+                <p>Copyright ©2012~2022 Snails . All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- ---------------------------------------------------------------------- -->
+
+
+
+
+    <!-- goToTheTop -->
+    <div id="goToTheTop">
+        <a href="#top">
+            <span></span>
+            <span></span>
+        </a>
+    </div>
+
+
+
+
+
+    <!-- jq -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- ------------------------------------------------------- -->
+
+    <!-- style.js -->
+    <script src="./js/style.js"></script>
+</body>
+
+</html>
